@@ -4,7 +4,7 @@ const { ContactModel } = require("../model/contacts.model")
 require("dotenv").config()
 const { validate } = require("../middleware/validate")
 
-
+//route to create or add new contact to the database
 contactRouter.post("/contact", validate, async (req, res) => {
     let data = req.body
     try {
@@ -20,6 +20,7 @@ contactRouter.post("/contact", validate, async (req, res) => {
     }
 })
 
+//route to get all contacts from the database
 contactRouter.get("/contacts", async (req, res) => {
     try {
         const contacts = await ContactModel.find()
@@ -31,6 +32,7 @@ contactRouter.get("/contacts", async (req, res) => {
     }
 })
 
+//route to get only a contact from the database with a particular id
 contactRouter.get("/contacts/:id", async (req, res) => {
     let ID = req.params.id
     try {
@@ -43,6 +45,7 @@ contactRouter.get("/contacts/:id", async (req, res) => {
     }
 })
 
+//route to update a contact from the database with a particular id
 contactRouter.patch("/contacts/:id", async (req, res) => {
     let ID = req.params.id
     let updatedVersion = req.body
@@ -59,6 +62,7 @@ contactRouter.patch("/contacts/:id", async (req, res) => {
     }
 })
 
+//route to delete a contact from the database with a particular id
 contactRouter.delete("/contacts/:id", async (req, res) => {
     let ID = req.params.id
 
