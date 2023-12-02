@@ -11,7 +11,6 @@ function AllRoutes() {
       <Routes>
         <Route path={"/"} element={<List />} />
         <Route path={"/addcontacts"} element={<AddNewContact />} />
-        <Route path={"/detailscontact/:id"} element={<Details />} />
         <Route path={"/editcontact/:id"} element={<EditContact />} />
       </Routes>
     </div>
