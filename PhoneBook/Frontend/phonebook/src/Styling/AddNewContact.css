@@ -9,7 +9,7 @@
 
 .AddNewContactMainContainer {
     border: 3px solid red;
-    width: 25%;
+    width: 35%;
     margin: auto;
     padding: 20px 30px 50px 30px;
     background-color: grey;
@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 768px) {
     .AddNewContactMainContainer {
-        width: 75%;
+        width: 85%;
     }
     .AddNewContactContainer{
         height: 200vh;
