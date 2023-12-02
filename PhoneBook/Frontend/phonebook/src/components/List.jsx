@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllContacts, deleteContact } from "../redux/action";
 import '../Styling/List.css'
 import toast from "react-hot-toast";
+import gifImage from '../assets/pleaseWait.gif'
 
 function List() {
     const data = useSelector((store) => store.contactReducer.contacts);
@@ -33,8 +34,8 @@ function List() {
 
     if (loading) {
         return (
-            <div>
-                loading...
+            <div style={{width:'100%', height:'100%'}}>
+                <img src={gifImage} alt="" />
             </div>
         );
     }
