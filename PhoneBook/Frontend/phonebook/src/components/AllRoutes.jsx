@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import EditContact from "./EditContact";
 import List from "./List";
-import Details from "./Details";
 import AddNewContact from "./AddNewContact";
 
 function AllRoutes() {

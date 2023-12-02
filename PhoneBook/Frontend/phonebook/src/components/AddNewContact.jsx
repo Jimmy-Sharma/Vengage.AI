@@ -39,7 +39,7 @@ function AddNewContact() {
                     <h2>Add Contact</h2>
                     <Link to={`/`}>
                         <button id="cancelBTNDiv">
-                            <img id="cancelBTN" src="cancel.png" alt="" />
+                            <img id="cancelBTN" src="cancel.png" alt="cancelBTN" />
                         </button>
                     </Link>
                 </div>

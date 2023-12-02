@@ -4,6 +4,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { getContactById, updateContact } from "../redux/action";
 import '../Styling/EditContact.css'
 import toast from "react-hot-toast";
+import cancelpng from '../assets/cancel.png'
+import editpng from '../assets/edit-button.png'
 
 function EditContact() {
     const navigate = useNavigate()
@@ -52,8 +54,8 @@ function EditContact() {
                 <div className="headingE">
                     <h2>Edit Contact</h2>
                     <Link to={`/`}>
-                        <button>
-                            <img id="cancelBTNE" src="cancel.png" alt="" />
+                        <button id="cancelBTNDivE">
+                            <img id="cancelBTNE" src={cancelpng} alt="" />
                         </button>
                     </Link>
                 </div>
@@ -75,7 +77,7 @@ function EditContact() {
                 </div>
                 <div className="addBTNContainerE">
                     <button onClick={handleUpdateContact} className="addBTNE">Edit Contacts
-                        <img src="../assets/edit-button.png" alt="" />
+                        <img src={editpng} alt="" />
                     </button>
                 </div>
             </div>
