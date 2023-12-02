@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { getContactById, updateContact } from "../redux/action";
-import '../Styling/AddNewContact.css'
+import '../Styling/EditContact.css'
 import toast from "react-hot-toast";
 
 function EditContact() {
@@ -46,17 +46,18 @@ function EditContact() {
         navigate(`/`);
     };
 
-    const movetocontact = () => {
-        navigate(`/`)
-    }
-
     return (
-        <div className="AddNewContactContainer">
-            <div className="AddNewContactMainContainer">
-                <div className="heading">
+        <div className="AddNewContactContainerE">
+            <div className="AddNewContactMainContainerE">
+                <div className="headingE">
                     <h2>Edit Contact</h2>
+                    <Link to={`/`}>
+                        <button>
+                            <img id="cancelBTNE" src="cancel.png" alt="" />
+                        </button>
+                    </Link>
                 </div>
-                <div className="inputbox">
+                <div className="inputboxE">
                     <label>Name:</label>
                     <input
                         type="text"
@@ -64,7 +65,7 @@ function EditContact() {
                         onChange={handleNameChange}
                     />
                 </div>
-                <div className="inputbox">
+                <div className="inputboxE">
                     <label>Contact Number:</label>
                     <input
                         type="number"
@@ -72,9 +73,9 @@ function EditContact() {
                         onChange={handleContactChange}
                     />
                 </div>
-                <div className="addBTNContainer">
-                    <button onClick={handleUpdateContact} className="addBTN">Edit Contacts
-                        <img src="edit-button.png" alt="" />
+                <div className="addBTNContainerE">
+                    <button onClick={handleUpdateContact} className="addBTNE">Edit Contacts
+                        <img src="../assets/edit-button.png" alt="" />
                     </button>
                 </div>
             </div>

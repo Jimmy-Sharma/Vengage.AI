@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { addContact } from "../redux/action";
 import '../Styling/AddNewContact.css'
 import toast from "react-hot-toast";
@@ -27,8 +27,8 @@ function AddNewContact() {
         toast.success("New Contact to DB Successfully");
         setTimeout(() => {
             navigate(`/`);
-          }, 2000);
-        
+        }, 2000);
+
     };
 
 
@@ -37,6 +37,11 @@ function AddNewContact() {
             <div className="AddNewContactMainContainer">
                 <div className="heading">
                     <h2>Add Contact</h2>
+                    <Link to={`/`}>
+                        <button id="cancelBTNDiv">
+                            <img id="cancelBTN" src="cancel.png" alt="" />
+                        </button>
+                    </Link>
                 </div>
                 <div className="inputbox">
                     <label>Name:</label>
@@ -46,7 +51,7 @@ function AddNewContact() {
                         onChange={handleNameChange}
                     />
                 </div>
-                <div  className="inputbox">
+                <div className="inputbox">
                     <label>Contact Number:</label>
                     <input
                         type="number"
